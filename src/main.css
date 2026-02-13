@@ -1,0 +1,234 @@
+@import "tailwindcss";
+
+/* CSS Custom Properties for Color Schemes */
+:root {
+  --color-primary: #16a34a;
+  --color-primary-dark: #15803d;
+  --color-primary-light: #22c55e;
+  --color-secondary: #059669;
+  --color-accent: #84cc16;
+  --color-bg-light: #ffffff;
+  --color-bg-dark: #0f172a;
+  --color-text-light: #1f2937;
+  --color-text-dark: #f1f5f9;
+  --color-card-light: #f9fafb;
+  --color-card-dark: #1e293b;
+  --transition-speed: 300ms;
+}
+
+/* Dark Mode Variables */
+.dark {
+  --color-bg: var(--color-bg-dark);
+  --color-text: var(--color-text-dark);
+  --color-card: var(--color-card-dark);
+}
+
+/* Light Mode Variables */
+:root:not(.dark) {
+  --color-bg: var(--color-bg-light);
+  --color-text: var(--color-text-light);
+  --color-card: var(--color-card-light);
+}
+
+/* Smooth transitions for theme switching */
+* {
+  transition: background-color var(--transition-speed) ease,
+              color var(--transition-speed) ease,
+              border-color var(--transition-speed) ease;
+}
+
+/* Custom Tailwind Components using @layer */
+@layer components {
+  /* Primary Button Component */
+  .uh-btn-primary {
+    @apply px-6 py-3 bg-green-600 text-white font-semibold rounded-lg
+           shadow-md hover:bg-green-700 active:bg-green-800
+           focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2
+           transition-all duration-300 inline-block text-center;
+  }
+  
+  .dark .uh-btn-primary {
+    @apply bg-green-500 hover:bg-green-600 active:bg-green-700;
+  }
+
+  /* Outline Button Component */
+  .uh-btn-outline {
+    @apply px-6 py-3 bg-transparent border-2 border-green-600 text-green-700
+           font-semibold rounded-lg hover:bg-green-50 active:bg-green-100
+           focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2
+           transition-all duration-300 inline-block text-center;
+  }
+  
+  .dark .uh-btn-outline {
+    @apply border-green-400 text-green-400 hover:bg-green-950 active:bg-green-900;
+  }
+
+  /* Card Component */
+  .uh-card {
+    @apply p-6 rounded-xl shadow-md bg-gradient-to-br from-green-600 to-green-800
+           hover:shadow-xl transition-all duration-300;
+  }
+  
+  .dark .uh-card {
+    @apply from-green-700 to-green-900 shadow-green-900/20;
+  }
+
+  /* Input Field Component */
+  .uh-input {
+    @apply w-full px-4 py-3 rounded-lg border-2 border-gray-300
+           focus:border-green-500 focus:ring-2 focus:ring-green-500/20
+           focus:outline-none transition-all duration-300
+           bg-white text-gray-900;
+  }
+  
+  .dark .uh-input {
+    @apply bg-gray-800 border-gray-600 text-gray-100
+           focus:border-green-400 focus:ring-green-400/20;
+  }
+
+  /* Calculator Card */
+  .calculator-card {
+    @apply bg-white rounded-2xl shadow-xl p-8 border border-gray-200;
+  }
+  
+  .dark .calculator-card {
+    @apply bg-gray-800 border-gray-700;
+  }
+
+  /* Badge Component */
+  .uh-badge {
+    @apply inline-flex items-center px-3 py-1 rounded-full text-sm font-medium
+           bg-green-100 text-green-800;
+  }
+  
+  .dark .uh-badge {
+    @apply bg-green-900/30 text-green-400;
+  }
+}
+
+@layer utilities {
+  /* Custom fade-in animation */
+  .fade-in {
+    animation: fadeIn 0.6s ease-in;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Slide-in animation */
+  .slide-in {
+    animation: slideIn 0.5s ease-out;
+  }
+  
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateX(-30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  /* Scale animation */
+  .scale-in {
+    animation: scaleIn 0.4s ease-out;
+  }
+  
+  @keyframes scaleIn {
+    from {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  /* Pulse animation for loading states */
+  .pulse-slow {
+    animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+}
+
+/* Base styles for dark mode */
+.dark {
+  @apply bg-gray-900 text-gray-100;
+}
+
+.dark body {
+  @apply bg-gray-900 text-gray-100;
+}
+
+.dark header {
+  @apply bg-green-700;
+}
+
+.dark footer {
+  @apply bg-gray-800 text-gray-400;
+}
+
+/* Form validation states */
+.input-error {
+  @apply border-red-500 focus:ring-red-500/20;
+}
+
+.input-success {
+  @apply border-green-500 focus:ring-green-500/20;
+}
+
+.error-message {
+  @apply text-red-600 text-sm mt-1;
+}
+
+.dark .error-message {
+  @apply text-red-400;
+}
+
+.success-message {
+  @apply text-green-600 text-sm mt-1;
+}
+
+.dark .success-message {
+  @apply text-green-400;
+}
+
+/* Loading spinner */
+.spinner {
+  border: 3px solid rgba(22, 163, 74, 0.1);
+  border-top-color: #16a34a;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Responsive images */
+img {
+  @apply max-w-full h-auto;
+}
+
+/* Focus visible for accessibility */
+*:focus-visible {
+  @apply outline-2 outline-offset-2 outline-green-500;
+}
+
+/* Skip to main content link for accessibility */
+.skip-link {
+  @apply absolute left-0 top-0 bg-green-600 text-white px-4 py-2 z-50
+         -translate-y-full focus:translate-y-0 transition-transform;
+}

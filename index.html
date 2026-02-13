@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Urban Harvest | Sustainable Living Made Simple</title>
+
+  <meta name="description"
+        content="Urban Harvest helps you shop eco-friendly products, track your carbon footprint with our sustainability calculator, and join a community committed to environmental responsibility." />
+
+  <meta name="theme-color" content="#16a34a" />
+
+  <!-- Tailwind CSS with custom styles -->
+  <link rel="stylesheet" href="/src/main.css" />
+  
+  <!-- Main JS -->
+  <script type="module" src="/src/main.js" defer></script>
+</head>
+
+<body class="bg-white text-gray-800">
+
+<!-- NAVBAR -->
+<header class="bg-green-600 text-white shadow-lg sticky top-0 z-50">
+  <nav class="max-w-7xl mx-auto flex flex-col md:flex-row
+              md:justify-between md:items-center gap-4 px-6 py-4">
+
+    <div class="flex items-center justify-between">
+      <h1 class="text-2xl font-bold">
+        🌱 Urban Harvest
+      </h1>
+    </div>
+
+    <ul class="flex flex-wrap justify-center gap-6 text-sm md:text-base">
+      <li><a href="index.html" class="underline font-semibold hover:text-green-200 transition">Home</a></li>
+      <li><a href="products.html" class="hover:text-green-200 transition">Products</a></li>
+      <li><a href="subscribe.html" class="hover:text-green-200 transition">Subscribe</a></li>
+      <li><a href="community.html" class="hover:text-green-200 transition">Community</a></li>
+      <li><a href="about.html" class="hover:text-green-200 transition">About</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- MAIN -->
+<main id="main-content" class="max-w-7xl mx-auto px-6 py-12">
+
+  <!-- HERO SECTION -->
+  <section class="text-center mb-24 py-12">
+    <h2 class="text-5xl md:text-6xl font-extrabold text-green-700 dark:text-green-400 mb-6 leading-tight">
+      Sustainable Living,<br>Made Simple
+    </h2>
+
+    <p class="text-lg md:text-xl max-w-3xl mx-auto mb-10 leading-relaxed">
+      Join thousands making a real environmental impact. Shop eco-friendly products, 
+      calculate your carbon footprint, and connect with a community passionate about sustainability.
+    </p>
+
+    <div class="flex flex-col sm:flex-row justify-center gap-4 mb-12">
+      <a href="#calculator"
+         class="uh-btn-primary transition hover:-translate-y-1 hover:shadow-lg">
+        Calculate Your Impact
+      </a>
+
+      <a href="products.html"
+         class="uh-btn-outline transition hover:-translate-y-1 hover:shadow-lg">
+        Explore Products
+      </a>
+
+      <a href="subscribe.html"
+         class="uh-btn-outline transition hover:-translate-y-1 hover:shadow-lg">
+        Join Community
+      </a>
+    </div>
+
+    <!-- Hero Stats -->
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-4xl mx-auto mt-12">
+      <div class="bg-green-50 dark:bg-green-900/20 p-6 rounded-xl">
+        <p class="text-4xl font-bold text-green-600 dark:text-green-400">5,000+</p>
+        <p class="text-sm text-gray-600 dark:text-gray-400 mt-2">Eco Products</p>
+      </div>
+      <div class="bg-green-50 dark:bg-green-900/20 p-6 rounded-xl">
+        <p class="text-4xl font-bold text-green-600 dark:text-green-400">2,500+</p>
+        <p class="text-sm text-gray-600 dark:text-gray-400 mt-2">Active Members</p>
+      </div>
+      <div class="bg-green-50 dark:bg-green-900/20 p-6 rounded-xl">
+        <p class="text-4xl font-bold text-green-600 dark:text-green-400">850 tons</p>
+        <p class="text-sm text-gray-600 dark:text-gray-400 mt-2">CO₂ Prevented</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SUSTAINABILITY CALCULATOR SECTION -->
+  <section id="calculator" class="mb-24 scroll-mt-20">
+    <div class="text-center mb-12">
+      <h3 class="text-4xl font-bold text-green-700 dark:text-green-400 mb-4">
+        Sustainability Calculator
+      </h3>
+      <p class="max-w-2xl mx-auto">
+        Discover your monthly carbon footprint and learn how Urban Harvest products 
+        can help you reduce your environmental impact.
+      </p>
+    </div>
+
+    <div class="calculator-card max-w-4xl mx-auto">
+      <form id="calculatorForm" class="space-y-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <!-- Plastic Bottles -->
+          <div>
+            <label for="plasticBottles" class="block text-sm font-semibold mb-2">
+              🍾 Plastic bottles used per month
+            </label>
+            <input 
+              type="number" 
+              id="plasticBottles" 
+              name="plasticBottles"
+              min="0"
+              step="1"
+              placeholder="e.g., 30"
+              class="uh-input"
+            />
+            <p class="text-xs text-gray-500 dark:text-gray-400 mt-1">Single-use water bottles, soda bottles, etc.</p>
+          </div>
+
+          <!-- Meat Meals -->
+          <div>
+            <label for="meatMeals" class="block text-sm font-semibold mb-2">
+              🥩 Meat-based meals per week
+            </label>
+            <input 
+              type="number" 
+              id="meatMeals" 
+              name="meatMeals"
+              min="0"
+              step="1"
+              placeholder="e.g., 14"
+              class="uh-input"
+            />
+            <p class="text-xs text-gray-500 dark:text-gray-400 mt-1">Beef, pork, chicken, or lamb meals</p>
+          </div>
+
+          <!-- Car Miles -->
+          <div>
+            <label for="carMiles" class="block text-sm font-semibold mb-2">
+              🚗 Car miles driven per month
+            </label>
+            <input 
+              type="number" 
+              id="carMiles" 
+              name="carMiles"
+              min="0"
+              step="1"
+              placeholder="e.g., 500"
+              class="uh-input"
+            />
+            <p class="text-xs text-gray-500 dark:text-gray-400 mt-1">Personal vehicle commuting and travel</p>
+          </div>
+
+          <!-- Electricity -->
+          <div>
+            <label for="electricityKwh" class="block text-sm font-semibold mb-2">
+              ⚡ Electricity usage (kWh/month)
+            </label>
+            <input 
+              type="number" 
+              id="electricityKwh" 
+              name="electricityKwh"
+              min="0"
+              step="1"
+              placeholder="e.g., 900"
+              class="uh-input"
+            />
+            <p class="text-xs text-gray-500 dark:text-gray-400 mt-1">Check your electricity bill for this number</p>
+          </div>
+        </div>
+
+        <button 
+          type="button" 
+          id="calculateImpact"
+          class="uh-btn-primary w-full md:w-auto px-12 py-4 text-lg">
+          Calculate My Impact
+        </button>
+      </form>
+
+      <!-- Results Area -->
+      <div id="calculatorResults" class="mt-8 hidden"></div>
+    </div>
+  </section>
+
+  <!-- WHY CHOOSE US -->
+  <section class="mb-24">
+    <h3 class="text-4xl font-bold text-center text-green-700 dark:text-green-400 mb-12">
+      Why Choose Urban Harvest?
+    </h3>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+      <div class="uh-btn-primary text-center transition hover:-translate-y-2 hover:shadow-2xl p-8">
+        <div class="text-5xl mb-4">🌿</div>
+        <h4 class="font-semibold text-xl mb-3 text-white">
+          Eco-Friendly Products
+        </h4>
+        <p class="text-white/90 text-sm leading-relaxed">
+          Carefully curated selection of sustainable products from ethical suppliers. 
+          Every item meets strict environmental and social responsibility standards.
+        </p>
+      </div>
+
+      <div class="uh-btn-primary text-center transition hover:-translate-y-2 hover:shadow-2xl p-8">
+        <div class="text-5xl mb-4">📊</div>
+        <h4 class="font-semibold text-xl mb-3 text-white">
+          Impact Dashboard
+        </h4>
+        <p class="text-white/90 text-sm leading-relaxed">
+          Track your environmental impact with real data. See exactly how your 
+          sustainable choices reduce waste and carbon emissions over time.
+        </p>
+      </div>
+
+      <div class="uh-btn-primary text-center transition hover:-translate-y-2 hover:shadow-2xl p-8">
+        <div class="text-5xl mb-4">🤝</div>
+        <h4 class="font-semibold text-xl mb-3 text-white">
+          Community Knowledge
+        </h4>
+        <p class="text-white/90 text-sm leading-relaxed">
+          Join a thriving community sharing sustainability tips, zero-waste recipes, 
+          and real stories of environmental impact.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FEATURED PRODUCTS -->
+  <section class="mb-24">
+    <div class="flex justify-between items-center mb-8">
+      <h3 class="text-3xl font-bold text-green-700 dark:text-green-400">
+        Featured Eco Products
+      </h3>
+      <a href="products.html" class="uh-btn-outline text-sm">
+        View All Products →
+      </a>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <!-- Product 1 -->
+      <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden hover:shadow-xl transition">
+        <img 
+          src="https://images.unsplash.com/photo-1602143407151-7111542de6e8?w=500" 
+          alt="Reusable water bottle"
+          class="w-full h-48 object-cover"
+          loading="lazy"
+        />
+        <div class="p-6">
+          <span class="uh-badge">Popular</span>
+          <h4 class="font-semibold text-lg text-gray-800 dark:text-gray-200 mt-2 mb-2">
+            Reusable Water Bottle
+          </h4>
+          <p class="text-gray-600 dark:text-gray-400 text-sm mb-3">
+            BPA-free, insulated bottle. Saves 120+ plastic bottles per year.
+          </p>
+          <div class="flex justify-between items-center">
+            <span class="text-green-600 dark:text-green-400 font-bold">$24.99</span>
+            <a href="products.html" class="text-green-600 dark:text-green-400 text-sm hover:underline">
+              Learn more →
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 2 -->
+      <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden hover:shadow-xl transition">
+        <img 
+          src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=500" 
+          alt="Food containers"
+          class="w-full h-48 object-cover"
+          loading="lazy"
+        />
+        <div class="p-6">
+          <span class="uh-badge">New</span>
+          <h4 class="font-semibold text-lg text-gray-800 dark:text-gray-200 mt-2 mb-2">
+            Glass Food Containers
+          </h4>
+          <p class="text-gray-600 dark:text-gray-400 text-sm mb-3">
+            Airtight, microwave-safe containers. Replace disposable plastic.
+          </p>
+          <div class="flex justify-between items-center">
+            <span class="text-green-600 dark:text-green-400 font-bold">$39.99</span>
+            <a href="products.html" class="text-green-600 dark:text-green-400 text-sm hover:underline">
+              Learn more →
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 3 -->
+      <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden hover:shadow-xl transition">
+        <img 
+          src="https://images.unsplash.com/photo-1542838132-92c53300491e?w=500" 
+          alt="Organic groceries"
+          class="w-full h-48 object-cover"
+          loading="lazy"
+        />
+        <div class="p-6">
+          <span class="uh-badge">Bestseller</span>
+          <h4 class="font-semibold text-lg text-gray-800 dark:text-gray-200 mt-2 mb-2">
+            Organic Grocery Box
+          </h4>
+          <p class="text-gray-600 dark:text-gray-400 text-sm mb-3">
+            Weekly organic produce from local farms. Fresh and sustainable.
+          </p>
+          <div class="flex justify-between items-center">
+            <span class="text-green-600 dark:text-green-400 font-bold">$49.99/week</span>
+            <a href="products.html" class="text-green-600 dark:text-green-400 text-sm hover:underline">
+              Learn more →
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="mb-24 bg-gray-50 dark:bg-gray-800 rounded-2xl p-12">
+    <h3 class="text-3xl font-bold text-center text-green-700 dark:text-green-400 mb-12">
+      How Urban Harvest Works
+    </h3>
+
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+
+      <div class="text-center">
+        <div class="w-16 h-16 bg-green-600 dark:bg-green-500 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
+          1
+        </div>
+        <h4 class="font-semibold text-lg mb-2 text-gray-800 dark:text-gray-200">Calculate Impact</h4>
+        <p class="text-gray-600 dark:text-gray-400 text-sm">
+          Use our calculator to understand your current carbon footprint.
+        </p>
+      </div>
+
+      <div class="text-center">
+        <div class="w-16 h-16 bg-green-600 dark:bg-green-500 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
+          2
+        </div>
+        <h4 class="font-semibold text-lg mb-2 text-gray-800 dark:text-gray-200">Discover Products</h4>
+        <p class="text-gray-600 dark:text-gray-400 text-sm">
+          Browse eco-friendly alternatives curated for sustainable living.
+        </p>
+      </div>
+
+      <div class="text-center">
+        <div class="w-16 h-16 bg-green-600 dark:bg-green-500 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
+          3
+        </div>
+        <h4 class="font-semibold text-lg mb-2 text-gray-800 dark:text-gray-200">Track Progress</h4>
+        <p class="text-gray-600 dark:text-gray-400 text-sm">
+          Monitor how your choices reduce waste and emissions over time.
+        </p>
+      </div>
+
+      <div class="text-center">
+        <div class="w-16 h-16 bg-green-600 dark:bg-green-500 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
+          4
+        </div>
+        <h4 class="font-semibold text-lg mb-2 text-gray-800 dark:text-gray-200">Join Community</h4>
+        <p class="text-gray-600 dark:text-gray-400 text-sm">
+          Share experiences and learn from others on the same journey.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="mb-24">
+    <h3 class="text-3xl font-bold text-center text-green-700 dark:text-green-400 mb-12">
+      What Our Community Says
+    </h3>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md">
+        <div class="flex items-center mb-4">
+          <div class="w-12 h-12 bg-green-600 text-white rounded-full flex items-center justify-center font-bold">
+            SJ
+          </div>
+          <div class="ml-3">
+            <p class="font-semibold text-gray-800 dark:text-gray-200">Sarah Johnson</p>
+            <p class="text-xs text-gray-500 dark:text-gray-400">Member since 2024</p>
+          </div>
+        </div>
+        <p class="text-gray-600 dark:text-gray-300 text-sm italic">
+          "The sustainability calculator opened my eyes to my real impact. I've reduced 
+          my carbon footprint by 40% in just 3 months!"
+        </p>
+        <div class="mt-3 text-yellow-500">⭐⭐⭐⭐⭐</div>
+      </div>
+
+      <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md">
+        <div class="flex items-center mb-4">
+          <div class="w-12 h-12 bg-green-600 text-white rounded-full flex items-center justify-center font-bold">
+            MR
+          </div>
+          <div class="ml-3">
+            <p class="font-semibold text-gray-800 dark:text-gray-200">Michael Rodriguez</p>
+            <p class="text-xs text-gray-500 dark:text-gray-400">Member since 2023</p>
+          </div>
+        </div>
+        <p class="text-gray-600 dark:text-gray-300 text-sm italic">
+          "Urban Harvest makes sustainable living accessible and affordable. The products 
+          are high quality and the community is incredibly supportive."
+        </p>
+        <div class="mt-3 text-yellow-500">⭐⭐⭐⭐⭐</div>
+      </div>
+
+      <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md">
+        <div class="flex items-center mb-4">
+          <div class="w-12 h-12 bg-green-600 text-white rounded-full flex items-center justify-center font-bold">
+            EP
+          </div>
+          <div class="ml-3">
+            <p class="font-semibold text-gray-800 dark:text-gray-200">Emily Parker</p>
+            <p class="text-xs text-gray-500 dark:text-gray-400">Member since 2025</p>
+          </div>
+        </div>
+        <p class="text-gray-600 dark:text-gray-300 text-sm italic">
+          "I love the transparency! Knowing exactly where products come from and their 
+          environmental impact helps me make better choices daily."
+        </p>
+        <div class="mt-3 text-yellow-500">⭐⭐⭐⭐⭐</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA SECTION -->
+  <section class="text-center bg-gradient-to-r from-green-600 to-green-700 dark:from-green-700 dark:to-green-800 rounded-2xl p-12 text-white">
+    <h3 class="text-4xl font-bold mb-4">
+      Ready to Make a Difference?
+    </h3>
+    <p class="text-lg mb-8 max-w-2xl mx-auto opacity-90">
+      Join our community today and start your journey towards a more sustainable lifestyle. 
+      Every small change creates a ripple effect for our planet.
+    </p>
+    <div class="flex flex-col sm:flex-row justify-center gap-4">
+      <a href="subscribe.html" class="bg-white text-green-700 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition">
+        Join Now - It's Free
+      </a>
+      <a href="about.html" class="border-2 border-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition">
+        Learn More About Us
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="bg-gray-100 dark:bg-gray-800 mt-24">
+  <div class="max-w-7xl mx-auto px-6 py-12">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+      <div>
+        <h4 class="font-bold text-lg text-green-700 dark:text-green-400 mb-4">Urban Harvest</h4>
+        <p class="text-sm text-gray-600 dark:text-gray-400">
+          Making sustainable living simple, accessible, and impactful for everyone.
+        </p>
+      </div>
+      <div>
+        <h4 class="font-semibold text-gray-800 dark:text-gray-200 mb-4">Quick Links</h4>
+        <ul class="space-y-2 text-sm text-gray-600 dark:text-gray-400">
+          <li><a href="index.html" class="hover:text-green-600 dark:hover:text-green-400">Home</a></li>
+          <li><a href="products.html" class="hover:text-green-600 dark:hover:text-green-400">Products</a></li>
+          <li><a href="community.html" class="hover:text-green-600 dark:hover:text-green-400">Community</a></li>
+          <li><a href="about.html" class="hover:text-green-600 dark:hover:text-green-400">About Us</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-semibold text-gray-800 dark:text-gray-200 mb-4">Resources</h4>
+        <ul class="space-y-2 text-sm text-gray-600 dark:text-gray-400">
+          <li><a href="#calculator" class="hover:text-green-600 dark:hover:text-green-400">Calculator</a></li>
+          <li><a href="subscribe.html" class="hover:text-green-600 dark:hover:text-green-400">Subscribe</a></li>
+          <li><a href="community.html" class="hover:text-green-600 dark:hover:text-green-400">Blog</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-semibold text-gray-800 dark:text-gray-200 mb-4">Contact</h4>
+        <p class="text-sm text-gray-600 dark:text-gray-400">
+          Email: hello@urbanharvest.eco<br>
+          Join our community for support
+        </p>
+      </div>
+    </div>
+    <div class="border-t border-gray-300 dark:border-gray-700 pt-8 text-center text-sm text-gray-600 dark:text-gray-400">
+      © 2026 Urban Harvest | Sustainable Living Platform | All Rights Reserved
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

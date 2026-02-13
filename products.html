@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Urban Harvest | Sustainable Products</title>
+
+  <meta name="description"
+        content="Browse our curated collection of eco-friendly products including reusable containers, organic food, sustainable cleaning supplies, and more. Every purchase supports a greener planet." />
+
+  <meta name="theme-color" content="#16a34a" />
+  
+  <!-- Dark Mode & Custom Styles -->
+  <link rel="stylesheet" href="/src/main.css" />
+  
+  <script type="module" src="/src/main.js" defer></script>
+</head>
+
+<body class="bg-white text-gray-800 m-0">
+
+<!-- NAVBAR -->
+<header class="bg-green-600 w-full text-white shadow-lg sticky top-0 z-50">
+  <nav class="max-w-7xl mx-auto flex flex-col md:flex-row
+              md:justify-between md:items-center gap-4 px-6 py-4">
+
+    <div class="flex items-center justify-between">
+      <h1 class="text-2xl font-bold">
+        🌱 Urban Harvest
+      </h1>
+    </div>
+
+    <ul class="flex flex-wrap justify-center gap-6 text-sm md:text-base">
+      <li><a href="index.html" class="hover:text-green-200 transition">Home</a></li>
+      <li><a href="products.html" class="underline font-semibold hover:text-green-200 transition">Products</a></li>
+      <li><a href="subscribe.html" class="hover:text-green-200 transition">Subscribe</a></li>
+      <li><a href="community.html" class="hover:text-green-200 transition">Community</a></li>
+      <li><a href="about.html" class="hover:text-green-200 transition">About</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="main-content" class="max-w-7xl mx-auto px-6 py-12">
+
+  <!-- INTRO -->
+  <section class="text-center mb-12">
+    <h2 class="text-4xl md:text-5xl font-bold text-green-600 dark:text-green-400 mb-4">
+      Sustainable Products Marketplace
+    </h2>
+    <p class="max-w-3xl mx-auto text-lg">
+      Carefully curated eco-friendly products that reduce environmental impact and support 
+      ethical sourcing. Every item is vetted for quality and sustainability standards.
+    </p>
+  </section>
+
+  <!-- FILTER BAR -->
+  <section class="flex flex-col md:flex-row justify-between items-center gap-6 mb-12 bg-gray-50 dark:bg-gray-800 p-6 rounded-xl">
+    <div>
+      <p class="text-sm text-gray-600 dark:text-gray-400 mb-2">Filter by category:</p>
+      <div class="flex flex-wrap gap-3">
+        <button class="uh-btn-outline filter-btn active transition hover:-translate-y-1 hover:shadow-lg text-sm px-4 py-2" data-filter="all">
+          All Products
+        </button>
+        <button class="uh-btn-outline filter-btn transition hover:-translate-y-1 hover:shadow-lg text-sm px-4 py-2" data-filter="kitchen">
+          Kitchen
+        </button>
+        <button class="uh-btn-outline filter-btn transition hover:-translate-y-1 hover:shadow-lg text-sm px-4 py-2" data-filter="food">
+          Food & Groceries
+        </button>
+        <button class="uh-btn-outline filter-btn transition hover:-translate-y-1 hover:shadow-lg text-sm px-4 py-2" data-filter="cleaning">
+          Cleaning
+        </button>
+        <button class="uh-btn-outline filter-btn transition hover:-translate-y-1 hover:shadow-lg text-sm px-4 py-2" data-filter="personal">
+          Personal Care
+        </button>
+      </div>
+    </div>
+
+    <div class="text-right">
+      <p id="productCount" class="text-sm text-gray-600 dark:text-gray-400 font-medium"></p>
+    </div>
+  </section>
+
+  <!-- PRODUCT GRID -->
+  <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+    <!-- PRODUCT 1 -->
+    <div class="uh-card transition hover:-translate-y-2 hover:shadow-2xl" data-category="kitchen">
+      <img src="/src/imgs/photo-1602143407151-7111542de6e8.jpeg"
+           alt="Reusable stainless steel water bottle"
+           class="w-full h-48 object-cover rounded-lg mb-4"
+           loading="lazy" />
+
+      <span class="uh-badge mb-2">Popular Choice</span>
+      <h3 class="font-semibold text-green-500 text-lg mb-2">Insulated Water Bottle</h3>
+      <p class="text-white text-sm mb-3">
+        Premium stainless steel, BPA-free bottle keeps drinks cold for 24hrs, hot for 12hrs. 
+        Durable design eliminates single-use plastic.
+      </p>
+      <p class="text-green-300 font-bold text-xl mb-3">$24.99</p>
+
+      <button class="toggle-impact text-green-400 underline text-sm hover:text-green-300 transition">
+        View sustainability impact
+      </button>
+      <div class="hidden mt-3 p-3 bg-green-900/30 rounded-lg text-sm text-green-300 border border-green-700">
+        <p class="font-semibold mb-1">Environmental Impact:</p>
+        <ul class="space-y-1 text-xs">
+          <li>&#10003; Saves ~156 plastic bottles per year</li>
+          <li>&#10003; Reduces 12.8 kg CO₂ annually</li>
+          <li>&#10003; Made from recycled materials</li>
+          <li>&#10003; 100% recyclable at end of life</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- PRODUCT 2 -->
+    <div class="uh-card transition hover:-translate-y-2 hover:shadow-2xl" data-category="kitchen">
+      <img src="/src/imgs/photo-1581578731548-c64695cc6952.jpeg"
+           alt="Glass food storage containers"
+           class="w-full h-48 object-cover rounded-lg mb-4"
+           loading="lazy" />
+
+      <span class="uh-badge mb-2">Bestseller</span>
+      <h3 class="font-semibold text-green-500 text-lg mb-2">Glass Container Set</h3>
+      <p class="text-white text-sm mb-3">
+        5-piece borosilicate glass container set with bamboo lids. Microwave, dishwasher, 
+        and freezer safe. Replace disposable plastic packaging.
+      </p>
+      <p class="text-green-300 font-bold text-xl mb-3">$39.99</p>
+
+      <button class="toggle-impact text-green-400 underline text-sm hover:text-green-300 transition">
+        View sustainability impact
+      </button>
+      <div class="hidden mt-3 p-3 bg-green-900/30 rounded-lg text-sm text-green-300 border border-green-700">
+        <p class="font-semibold mb-1">Environmental Impact:</p>
+        <ul class="space-y-1 text-xs">
+          <li>&#10003; Eliminates 200+ plastic containers yearly</li>
+          <li>&#10003; Reduces landfill waste by 85%</li>
+          <li>&#10003; Sustainable bamboo lids</li>
+          <li>&#10003; 50+ year lifespan</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- PRODUCT 3 -->
+    <div class="uh-card transition hover:-translate-y-2 hover:shadow-2xl" data-category="kitchen">
+      <img src="/src/imgs/product-3.jpeg"
+           alt="Reusable silicone food bags"
+           class="w-full h-48 object-cover rounded-lg mb-4"
+           loading="lazy" />
+
+      <span class="uh-badge mb-2">New Arrival</span>
+      <h3 class="font-semibold text-green-500 text-lg mb-2">Silicone Food Bags</h3>
+      <p class="text-white text-sm mb-3">
+        Set of 6 platinum silicone bags in various sizes. Leak-proof, freezer and microwave 
+        safe. Perfect for meal prep and storage.
+      </p>
+      <p class="text-green-300 font-bold text-xl mb-3">$29.99</p>
+
+      <button class="toggle-impact text-green-400 underline text-sm hover:text-green-300 transition">
+        View sustainability impact
+      </button>
+      <div class="hidden mt-3 p-3 bg-green-900/30 rounded-lg text-sm text-green-300 border border-green-700">
+        <p class="font-semibold mb-1">Environmental Impact:</p>
+        <ul class="space-y-1 text-xs">
+          <li>&#10003; Replaces 500+ plastic bags per year</li>
+          <li>&#10003; BPA and toxin-free</li>
+          <li>&#10003; Dishwasher safe, reusable 3000+ times</li>
+          <li>&#10003; Reduces ocean plastic pollution</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- PRODUCT 4 -->
+    <div class="uh-card transition hover:-translate-y-2 hover:shadow-2xl" data-category="food">
+      <img src="/src/imgs/product-4.jpeg"
+           alt="Organic weekly grocery box"
+           class="w-full h-48 object-cover rounded-lg mb-4"
+           loading="lazy" />
+
+      <span class="uh-badge mb-2">Subscription</span>
+      <h3 class="font-semibold text-green-500 text-lg mb-2">Organic Grocery Box</h3>
+      <p class="text-white text-sm mb-3">
+        Weekly delivery of fresh, locally-sourced organic produce. Support local farmers 
+        and reduce food miles. Customizable to dietary preferences.
+      </p>
+      <p class="text-green-300 font-bold text-xl mb-3">$49.99/week</p>
+
+      <button class="toggle-impact text-green-400 underline text-sm hover:text-green-300 transition">
+        View sustainability impact
+      </button>
+      <div class="hidden mt-3 p-3 bg-green-900/30 rounded-lg text-sm text-green-300 border border-green-700">
+        <p class="font-semibold mb-1">Environmental Impact:</p>
+        <ul class="space-y-1 text-xs">
+          <li>&#10003; Supports local agriculture (&lt; 50 mile radius)</li>
+          <li>&#10003; 80% less transport emissions than supermarkets</li>
+          <li>&#10003; Zero pesticides, organic certification</li>
+          <li>&#10003; Minimal packaging, all compostable</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- PRODUCT 5 -->
+    <div class="uh-card transition hover:-translate-y-2 hover:shadow-2xl" data-category="food">
+      <img src="/src/imgs/prduct-5.jpeg"
+           alt="Plant-based meal kit with fresh vegetables"
+           class="w-full h-48 object-cover rounded-lg mb-4"
+           loading="lazy" />
+
+      <span class="uh-badge mb-2">Chef's Pick</span>
+      <h3 class="font-semibold text-green-500 text-lg mb-2">Plant-Based Meal Kit</h3>
+      <p class="text-white text-sm mb-3">
+        Delicious, nutritious plant-based meal kits. All ingredients pre-portioned with 
+        recipe cards. Zero meat production impact, minimal packaging.
+      </p>
+      <p class="text-green-300 font-bold text-xl mb-3">$34.99/meal (serves 4)</p>
+
+      <button class="toggle-impact text-green-400 underline text-sm hover:text-green-300 transition">
+        View sustainability impact
+      </button>
+      <div class="hidden mt-3 p-3 bg-green-900/30 rounded-lg text-sm text-green-300 border border-green-700">
+        <p class="font-semibold mb-1">Environmental Impact:</p>
+        <ul class="space-y-1 text-xs">
+          <li>&#10003; 73% lower carbon footprint than meat meals</li>
+          <li>&#10003; Saves 1,800 gallons water per meal vs beef</li>
+          <li>&#10003; No factory farming impact</li>
+          <li>&#10003; Packaging 100% recyclable/compostable</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- PRODUCT 6 -->
+    <div class="uh-card transition hover:-translate-y-2 hover:shadow-2xl" data-category="food">
+      <img src="/src/imgs/product-6.jpeg"
+           alt="Bulk organic grains and nuts"
+           class="w-full h-48 object-cover rounded-lg mb-4"
+           loading="lazy" />
+
+      <span class="uh-badge mb-2">Zero Waste</span>
+      <h3 class="font-semibold text-green-500 text-lg mb-2">Bulk Organic Staples</h3>
+      <p class="text-white text-sm mb-3">
+        Rice, quinoa, oats, nuts, and legumes sold in bulk. Bring your own containers or 
+        use our reusable packaging. Certified organic, fair trade.
+      </p>
+      <p class="text-green-300 font-bold text-xl mb-3">From $3.99/lb</p>
+
+      <button class="toggle-impact text-green-400 underline text-sm hover:text-green-300 transition">
+        View sustainability impact
+      </button>
+      <div class="hidden mt-3 p-3 bg-green-900/30 rounded-lg text-sm text-green-300 border border-green-700">
+        <p class="font-semibold mb-1">Environmental Impact:</p>
+        <ul class="space-y-1 text-xs">
+          <li>&#10003; 90% less packaging waste than pre-packaged</li>
+          <li>&#10003; Fair trade certified, supports farmers</li>
+          <li>&#10003; Buy only what you need, reduce food waste</li>
+          <li>&#10003; Lower cost per unit than packaged alternatives</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- PRODUCT 7 -->
+    <div class="uh-card transition hover:-translate-y-2 hover:shadow-2xl" data-category="cleaning">
+      <img src="/src/imgs/product7.jpeg"
+           alt="Eco-friendly cleaning products kit"
+           class="w-full h-48 object-cover rounded-lg mb-4"
+           loading="lazy" />
+
+      <span class="uh-badge mb-2">Staff Pick</span>
+      <h3 class="font-semibold text-green-500 text-lg mb-2">Eco Cleaning Kit</h3>
+      <p class="text-white text-sm mb-3">
+        Chemical-free, plant-based cleaning concentrates with refillable spray bottles. 
+        Safe for families, pets, and the environment. One kit lasts 6 months.
+      </p>
+      <p class="text-green-300 font-bold text-xl mb-3">$44.99</p>
+
+      <button class="toggle-impact text-green-400 underline text-sm hover:text-green-300 transition">
+        View sustainability impact
+      </button>
+      <div class="hidden mt-3 p-3 bg-green-900/30 rounded-lg text-sm text-green-300 border border-green-700">
+        <p class="font-semibold mb-1">Environmental Impact:</p>
+        <ul class="space-y-1 text-xs">
+          <li>&#10003; Zero harsh chemicals, safe greywater discharge</li>
+          <li>&#10003; Reduces water pollution by 95%</li>
+          <li>&#10003; Concentrated formula = less packaging/shipping</li>
+          <li>&#10003; Bottles are lifetime reusable</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- PRODUCT 8 -->
+    <div class="uh-card transition hover:-translate-y-2 hover:shadow-2xl" data-category="cleaning">
+      <img src="/src/imgs/product-8.jpeg"
+           alt="Bamboo cleaning brushes set"
+           class="w-full h-48 object-cover rounded-lg mb-4"
+           loading="lazy" />
+
+      <span class="uh-badge mb-2">Eco Champion</span>
+      <h3 class="font-semibold text-green-500 text-lg mb-2">Bamboo Brush Set</h3>
+      <p class="text-white text-sm mb-3">
+        6-piece bamboo cleaning brush set with natural bristles. Plastic-free, biodegradable 
+        handles. Perfect for kitchen, bathroom, and general cleaning.
+      </p>
+      <p class="text-green-300 font-bold text-xl mb-3">$18.99</p>
+
+      <button class="toggle-impact text-green-400 underline text-sm hover:text-green-300 transition">
+        View sustainability impact
+      </button>
+      <div class="hidden mt-3 p-3 bg-green-900/30 rounded-lg text-sm text-green-300 border border-green-700">
+        <p class="font-semibold mb-1">Environmental Impact:</p>
+        <ul class="space-y-1 text-xs">
+          <li>&#10003; 100% plastic-free alternative</li>
+          <li>&#10003; Fully biodegradable and compostable</li>
+          <li>&#10003; Bamboo grows 35x faster than hardwood</li>
+          <li>&#10003; Natural antibacterial properties</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- PRODUCT 9 -->
+    <div class="uh-card transition hover:-translate-y-2 hover:shadow-2xl" data-category="cleaning">
+      <img src="/src/imgs/produt-9.jpg"
+           alt="Reusable cleaning cloths"
+           class="w-full h-48 object-cover rounded-lg mb-4"
+           loading="lazy" />
+
+      <span class="uh-badge mb-2">Value Pack</span>
+      <h3 class="font-semibold text-green-500 text-lg mb-2">Reusable Cleaning Cloths</h3>
+      <p class="text-white text-sm mb-3">
+        12-pack Swedish dishcloths made from cellulose and cotton. Replace 15 rolls of 
+        paper towels each. Machine washable, naturally biodegradable.
+      </p>
+      <p class="text-green-300 font-bold text-xl mb-3">$16.99</p>
+
+      <button class="toggle-impact text-green-400 underline text-sm hover:text-green-300 transition">
+        View sustainability impact
+      </button>
+      <div class="hidden mt-3 p-3 bg-green-900/30 rounded-lg text-sm text-green-300 border border-green-700">
+        <p class="font-semibold mb-1">Environmental Impact:</p>
+        <ul class="space-y-1 text-xs">
+          <li>&#10003; Replaces 180 rolls of paper towels</li>
+          <li>&#10003; Saves 15 trees per household/year</li>
+          <li>&#10003; Washable 200+ times</li>
+          <li>&#10003; Composts in 4-6 weeks</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- PRODUCT 10 -->
+    <div class="uh-card transition hover:-translate-y-2 hover:shadow-2xl" data-category="personal">
+      <img src="/src/imgs/product-10.jpeg"
+           alt="Bamboo toothbrushes"
+           class="w-full h-48 object-cover rounded-lg mb-4"
+           loading="lazy" />
+
+      <span class="uh-badge mb-2">Dentist Approved</span>
+      <h3 class="font-semibold text-green-500 text-lg mb-2">Bamboo Toothbrush (4-pack)</h3>
+      <p class="text-white text-sm mb-3">
+        Sustainable bamboo handle with charcoal-infused BPA-free nylon bristles. 
+        Ergonomic design, dentist recommended. Compostable handle.
+      </p>
+      <p class="text-green-300 font-bold text-xl mb-3">$12.99</p>
+
+      <button class="toggle-impact text-green-400 underline text-sm hover:text-green-300 transition">
+        View sustainability impact
+      </button>
+      <div class="hidden mt-3 p-3 bg-green-900/30 rounded-lg text-sm text-green-300 border border-green-700">
+        <p class="font-semibold mb-1">Environmental Impact:</p>
+        <ul class="space-y-1 text-xs">
+          <li>&#10003; Prevents 4 plastic toothbrushes from landfills</li>
+          <li>&#10003; Handle biodegrades in 6 months</li>
+          <li>&#10003; Bamboo is naturally antimicrobial</li>
+          <li>&#10003; 1 billion plastic toothbrushes discarded yearly - not yours!</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- PRODUCT 11 -->
+    <div class="uh-card transition hover:-translate-y-2 hover:shadow-2xl" data-category="personal">
+      <img src="/src/imgs/product-11.jpeg"
+           alt="Shampoo and conditioner bars"
+           class="w-full h-48 object-cover rounded-lg mb-4"
+           loading="lazy" />
+
+      <span class="uh-badge mb-2">Salon Quality</span>
+      <h3 class="font-semibold text-green-500 text-lg mb-2">Shampoo & Conditioner Bars</h3>
+      <p class="text-white text-sm mb-3">
+        Natural, plastic-free hair care bars. One bar equals 3 bottles of liquid shampoo. 
+        Sulfate-free, paraben-free, vegan, and cruelty-free.
+      </p>
+      <p class="text-green-300 font-bold text-xl mb-3">$22.99/set</p>
+
+      <button class="toggle-impact text-green-400 underline text-sm hover:text-green-300 transition">
+        View sustainability impact
+      </button>
+      <div class="hidden mt-3 p-3 bg-green-900/30 rounded-lg text-sm text-green-300 border border-green-700">
+        <p class="font-semibold mb-1">Environmental Impact:</p>
+        <ul class="space-y-1 text-xs">
+          <li>&#10003; Eliminates 6 plastic bottles per set</li>
+          <li>&#10003; 80% less packaging than liquid alternatives</li>
+          <li>&#10003; Concentrated formula lasts 80-100 washes</li>
+          <li>&#10003; Zero microplastics in water systems</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- PRODUCT 12 -->
+    <div class="uh-card transition hover:-translate-y-2 hover:shadow-2xl" data-category="personal">
+      <img src="/src/imgs/product-12.jpg"
+           alt="Reusable cotton rounds"
+           class="w-full h-48 object-cover rounded-lg mb-4"
+           loading="lazy" />
+
+      <span class="uh-badge mb-2">Gentle Care</span>
+      <h3 class="font-semibold text-green-500 text-lg mb-2">Organic Cotton Rounds</h3>
+      <p class="text-white text-sm mb-3">
+        16-pack reusable makeup remover pads made from organic bamboo cotton. Soft, 
+        durable, machine washable. Includes laundry bag.
+      </p>
+      <p class="text-green-300 font-bold text-xl mb-3">$14.99</p>
+
+      <button class="toggle-impact text-green-400 underline text-sm hover:text-green-300 transition">
+        View sustainability impact
+      </button>
+      <div class="hidden mt-3 p-3 bg-green-900/30 rounded-lg text-sm text-green-300 border border-green-700">
+        <p class="font-semibold mb-1">Environmental Impact:</p>
+        <ul class="space-y-1 text-xs">
+          <li>&#10003; Replaces 2,000+ disposable cotton pads</li>
+          <li>&#10003; Saves money - reuse for 5+ years</li>
+          <li>&#10003; Organic, pesticide-free cotton</li>
+          <li>&#10003; Reduces landfill waste by 90%</li>
+        </ul>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- CTA SECTION -->
+  <section class="mt-20 text-center bg-gradient-to-r from-green-600 to-green-700 dark:from-green-700 dark:to-green-800 rounded-2xl p-12 text-white">
+    <h3 class="text-3xl font-bold mb-4">
+      Can't Find What You're Looking For?
+    </h3>
+    <p class="text-lg mb-8 max-w-2xl mx-auto opacity-90">
+      Join our community to get personalized product recommendations based on your 
+      sustainability goals and lifestyle preferences.
+    </p>
+    <div class="flex flex-col sm:flex-row justify-center gap-4">
+      <a href="subscribe.html" class="bg-white text-green-700 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition">
+        Subscribe for Recommendations
+      </a>
+      <a href="index.html#calculator" class="border-2 border-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition">
+        Calculate Your Impact
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="bg-gray-100 dark:bg-gray-800 mt-24">
+  <div class="max-w-7xl mx-auto px-6 py-12">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+      <div>
+        <h4 class="font-bold text-lg text-green-700 dark:text-green-400 mb-4">Urban Harvest</h4>
+        <p class="text-sm text-gray-600 dark:text-gray-400">
+          Making sustainable living simple, accessible, and impactful for everyone.
+        </p>
+      </div>
+      <div>
+        <h4 class="font-semibold text-gray-800 dark:text-gray-200 mb-4">Shop</h4>
+        <ul class="space-y-2 text-sm text-gray-600 dark:text-gray-400">
+          <li><a href="#" class="hover:text-green-600 dark:hover:text-green-400">Kitchen & Home</a></li>
+          <li><a href="#" class="hover:text-green-600 dark:hover:text-green-400">Food & Groceries</a></li>
+          <li><a href="#" class="hover:text-green-600 dark:hover:text-green-400">Cleaning Supplies</a></li>
+          <li><a href="#" class="hover:text-green-600 dark:hover:text-green-400">Personal Care</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-semibold text-gray-800 dark:text-gray-200 mb-4">Customer Service</h4>
+        <ul class="space-y-2 text-sm text-gray-600 dark:text-gray-400">
+          <li><a href="#" class="hover:text-green-600 dark:hover:text-green-400">Shipping Info</a></li>
+          <li><a href="#" class="hover:text-green-600 dark:hover:text-green-400">Returns</a></li>
+          <li><a href="#" class="hover:text-green-600 dark:hover:text-green-400">FAQ</a></li>
+          <li><a href="#" class="hover:text-green-600 dark:hover:text-green-400">Contact Us</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-semibold text-gray-800 dark:text-gray-200 mb-4">Follow Us</h4>
+        <p class="text-sm text-gray-600 dark:text-gray-400">
+          Join our community on social media for daily sustainability tips and exclusive offers.
+        </p>
+      </div>
+    </div>
+    <div class="border-t border-gray-300 dark:border-gray-700 pt-8 text-center text-sm text-gray-600 dark:text-gray-400">
+      © 2026 Urban Harvest | Sustainable Living Platform | All Rights Reserved
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

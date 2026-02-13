@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Urban Harvest | Community</title>
+
+  <!-- Dark Mode & Custom Styles -->
+  <link rel="stylesheet" href="/src/main.css" />
+
+  <meta name="description"
+        content="Join the Urban Harvest community to share sustainability tips, eco-friendly recipes, and inspiring stories." />
+
+  <script type="module" src="/src/main.js"></script>
+</head>
+
+<body class="bg-white text-gray-800">
+
+<!-- NAVBAR -->
+<header class="bg-green-600 text-white">
+  <nav class="max-w-7xl mx-auto flex flex-col md:flex-row
+            md:justify-between md:items-center gap-4 p-4">
+    <h1 class="text-2xl font-bold text-center md:text-left">
+      Urban Harvest
+    </h1>
+
+    <ul class="flex flex-wrap justify-center gap-4 text-sm md:text-base">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="subscribe.html">Subscribe</a></li>
+      <li><a href="community.html" class="underline font-semibold">Community</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main class="max-w-7xl mx-auto px-6 py-20">
+
+  <!-- INTRO -->
+  <section class="text-center mb-20 fade-in">
+    <h2 class="text-4xl md:text-5xl font-bold text-green-700 mb-6">
+      Community & Recipes
+    </h2>
+
+    <p class=" max-w-2xl mx-auto text-lg leading-relaxed">
+      Learn, share, and grow together. Discover sustainability tips,
+      eco-friendly recipes, and inspiring stories from our community.
+    </p>
+  </section>
+
+  <!-- COMMUNITY HIGHLIGHTS -->
+  <section class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20 fade-in">
+
+    <div class="uh-btn-primary text-center transition hover:-translate-y-1 hover:shadow-lg">
+      <div class="text-4xl mb-3">🌱</div>
+      <h3 class="font-semibold text-lg mb-2">Sustainability Tips</h3>
+      <p class="text-white text-sm">
+        Simple habits and practical advice for sustainable living.
+      </p>
+    </div>
+
+    <div class="uh-btn-primary text-center transition hover:-translate-y-1 hover:shadow-lg">
+      <div class="text-4xl mb-3">🥗</div>
+      <h3 class="font-semibold text-lg mb-2">Eco Recipes</h3>
+      <p class="text-white text-sm">
+        Zero-waste and plant-based recipes shared by the community.
+      </p>
+    </div>
+
+    <div class="uh-btn-primary text-center transition hover:-translate-y-1 hover:shadow-lg">
+      <div class="text-4xl mb-3">💬</div>
+      <h3 class="font-semibold text-lg mb-2">Community Stories</h3>
+      <p class="text-white text-sm">
+        Real stories from people making positive environmental impact.
+      </p>
+    </div>
+
+  </section>
+
+  <!-- TABS -->
+  <section class="mb-12 fade-in">
+    <div class="flex justify-center gap-4">
+      <button class="uh-btn-outline tab-btn active transition hover:-translate-y-1 hover:shadow-lg" data-tab="tips">
+        Tips
+      </button>
+      <button class="uh-btn-outline tab-btn transition hover:-translate-y-1 hover:shadow-lg" data-tab="recipes">
+        Recipes
+      </button>
+      <button class="uh-btn-outline tab-btn transition hover:-translate-y-1 hover:shadow-lg" data-tab="stories">
+        Stories
+      </button>
+    </div>
+  </section>
+
+  <!-- TAB CONTENT -->
+  <section>
+
+    <!-- TIPS -->
+    <div class="tab-content grid grid-cols-1 md:grid-cols-2 gap-8"
+         data-content="tips">
+
+      <div class="uh-card transition hover:-translate-y-1 hover:shadow-lg">
+        <h4 class="font-semibold text-green-500 text-lg mb-2">Zero-Waste Cooking</h4>
+        <p class="text-white text-sm">
+          Learn how to reduce food waste with smart meal planning and creative use of leftovers.
+        </p>
+      </div>
+
+      <div class="uh-card transition hover:-translate-y-1 hover:shadow-lg">
+        <h4 class="font-semibold text-green-500 text-lg mb-2">Energy-Saving Habits</h4>
+        <p class="text-white text-sm">
+          Small daily actions that lower your carbon footprint and reduce utility costs.
+        </p>
+      </div>
+
+      <div class="uh-card transition hover:-translate-y-1 hover:shadow-lg">
+        <h4 class="font-semibold text-green-500 text-lg mb-2">Sustainable Shopping</h4>
+        <p class="text-white text-sm">
+          Tips for choosing eco-friendly products and reducing packaging waste.
+        </p>
+      </div>
+
+      <div class="uh-card transition hover:-translate-y-1 hover:shadow-lg">
+        <h4 class="font-semibold text-green-500 text-lg mb-2">Composting Basics</h4>
+        <p class="text-white text-sm">
+          Start composting at home to turn food scraps into nutrient-rich soil.
+        </p>
+      </div>
+
+    </div>
+
+    <!-- RECIPES -->
+    <div class="tab-content hidden grid grid-cols-1 md:grid-cols-2 gap-8"
+         data-content="recipes">
+
+      <div class="uh-card transition hover:-translate-y-1 hover:shadow-lg">
+        <h4 class="font-semibold text-green-500 text-lg mb-2">Plant-Based Lunch Bowl</h4>
+        <p class="text-white text-sm">
+          Nutritious, affordable, and low-impact meals packed with vegetables and whole grains.
+        </p>
+      </div>
+
+      <div class="uh-card transition hover:-translate-y-1 hover:shadow-lg">
+        <h4 class="font-semibold text-green-500 text-lg mb-2">Leftover Revival Recipes</h4>
+        <p class="text-white text-sm">
+          Turn yesterday's dinner into today's delicious new meals and reduce food waste.
+        </p>
+      </div>
+
+      <div class="uh-card transition hover:-translate-y-1 hover:shadow-lg">
+        <h4 class="font-semibold text-green-500 text-lg mb-2">Zero-Waste Smoothies</h4>
+        <p class="text-white text-sm">
+          Use vegetable scraps and fruit peels to create nutritious, waste-free smoothies.
+        </p>
+      </div>
+
+      <div class="uh-card transition hover:-translate-y-1 hover:shadow-lg">
+        <h4 class="font-semibold text-green-500 text-lg mb-2">One-Pot Sustainable Meals</h4>
+        <p class="text-white text-sm">
+          Easy recipes that minimize cleanup, save energy, and maximize flavor.
+        </p>
+      </div>
+
+    </div>
+
+    <!-- STORIES -->
+    <div class="tab-content hidden grid grid-cols-1 md:grid-cols-2 gap-8"
+         data-content="stories">
+
+      <div class="uh-card transition hover:-translate-y-1 hover:shadow-lg">
+        <h4 class="font-semibold text-green-500 text-lg mb-2">From Plastic-Free to Purpose-Driven</h4>
+        <p class="text-white text-sm">
+          A community member's journey to sustainable living and how small changes created big impact.
+        </p>
+      </div>
+
+      <div class="uh-card transition hover:-translate-y-1 hover:shadow-lg">
+        <h4 class="font-semibold text-green-500 text-lg mb-2">Growing a Green Home</h4>
+        <p class="text-white text-sm">
+          How small changes transformed an urban household into an eco-friendly haven.
+        </p>
+      </div>
+
+      <div class="uh-card transition hover:-translate-y-1 hover:shadow-lg">
+        <h4 class="font-semibold text-green-500 text-lg mb-2">The Zero-Waste Family</h4>
+        <p class="text-white text-sm">
+          Meet a family who reduced their waste by 80% in just six months.
+        </p>
+      </div>
+
+      <div class="uh-card transition hover:-translate-y-1 hover:shadow-lg">
+        <h4 class="font-semibold text-green-500 text-lg mb-2">Urban Gardening Success</h4>
+        <p class="text-white text-sm">
+          Growing fresh produce in a small apartment balcony - a beginner's story.
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- CTA -->
+  <section class="text-center mt-24 fade-in">
+    <h3 class="text-3xl font-bold text-green-700 mb-4">
+      Share Your Story
+    </h3>
+
+    <p class="max-w-xl mx-auto mb-6">
+      Join the Urban Harvest community and contribute your own tips,
+      recipes, and sustainability experiences.
+    </p>
+
+    <a href="subscribe.html" class="uh-btn-primary transition hover:-translate-y-1 hover:shadow-lg">
+      Join the Community
+    </a>
+  </section>
+
+</main>
+
+<footer class="bg-gray-100 dark:bg-gray-800 mt-24">
+  <div class="max-w-7xl mx-auto px-6 py-12">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+      <div>
+        <h4 class="font-bold text-lg text-green-700 dark:text-green-400 mb-4">Urban Harvest</h4>
+        <p class="text-sm text-gray-600 dark:text-gray-400">
+          Making sustainable living simple, accessible, and impactful for everyone.
+        </p>
+      </div>
+      <div>
+        <h4 class="font-semibold text-gray-800 dark:text-gray-200 mb-4">Company</h4>
+        <ul class="space-y-2 text-sm text-gray-600 dark:text-gray-400">
+          <li><a href="#" class="hover:text-green-600 dark:hover:text-green-400">Our Story</a></li>
+          <li><a href="#" class="hover:text-green-600 dark:hover:text-green-400">Careers</a></li>
+          <li><a href="#" class="hover:text-green-600 dark:hover:text-green-400">Press</a></li>
+          <li><a href="#" class="hover:text-green-600 dark:hover:text-green-400">Partners</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-semibold text-gray-800 dark:text-gray-200 mb-4">Resources</h4>
+        <ul class="space-y-2 text-sm text-gray-600 dark:text-gray-400">
+          <li><a href="index.html#calculator" class="hover:text-green-600 dark:hover:text-green-400">Impact Calculator</a></li>
+          <li><a href="community.html" class="hover:text-green-600 dark:hover:text-green-400">Blog</a></li>
+          <li><a href="#" class="hover:text-green-600 dark:hover:text-green-400">Sustainability Guide</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-semibold text-gray-800 dark:text-gray-200 mb-4">Contact</h4>
+        <p class="text-sm text-gray-600 dark:text-gray-400">
+          Email: hello@urbanharvest.eco<br>
+          Phone: +1 (555) 123-4567<br>
+          San Francisco, CA
+        </p>
+      </div>
+    </div>
+    <div class="border-t border-gray-300 dark:border-gray-700 pt-8 text-center text-sm text-gray-600 dark:text-gray-400">
+      © 2026 Urban Harvest | Sustainable Living Platform | All Rights Reserved
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
